@@ -90,7 +90,7 @@ app.use(function(req, res, next) {
 
 // Setup Socket IO
 var server = http.createServer(app);
-var io = require("socket.io").listen(server);
+var io = require("socket.io")(server);
 
 server.listen(listenPort, function() {
   console.log("Listening on port " + listenPort);
